@@ -67,7 +67,7 @@ module.exports = {
 
       const embed = new EmbedBuilder()
         .setColor("#ff0000")
-        .setTitle(`💥 FLOW ATIVADO: ${fluxo.nome}`)
+        .setTitle(isNPC ? "💥 FLOW ATIVADO" : `💥 FLOW ATIVADO: ${fluxo.nome}`)
         .setDescription(
           `**${alvo.nome}** entrou em estado de **FLUXO**!\n\n${fluxo.descricao}\n\n🩸 *“Os limites humanos foram quebrados...”*`
         )
