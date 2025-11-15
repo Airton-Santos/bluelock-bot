@@ -7,29 +7,29 @@ const ETAPAS = 5;
 // Opções de treino por etapa (atributo oculto)
 const TREINOS = [
   [
-    { label: "Corrida leve", atributo: "velocidade" },
-    { label: "Alongamento", atributo: "drible" },
-    { label: "Saltos e agilidade", atributo: "reflexo" },
+    { label: "Ritmo de campo", atributo: "velocidade" },
+    { label: "Controle corporal", atributo: "drible" },
+    { label: "Movimentos rápidos", atributo: "reflexo" },
   ],
   [
-    { label: "Chute ao gol", atributo: "chute" },
-    { label: "Drible em cones", atributo: "drible" },
-    { label: "Corrida de velocidade", atributo: "velocidade" },
+    { label: "Finalização básica", atributo: "chute" },
+    { label: "Deslocamento com bola", atributo: "drible" },
+    { label: "Arrancada curta", atributo: "velocidade" },
   ],
   [
-    { label: "Corrida leve", atributo: "stamina" },
-    { label: "Técnicas de finalização", atributo: "chute" },
-    { label: "Defesa e reflexos", atributo: "reflexo" },
+    { label: "Ritmo de campo", atributo: "velocidade" },
+    { label: "Foco na finalização", atributo: "chute" },
+    { label: "Reação defensiva", atributo: "reflexo" },
   ],
   [
-    { label: "Treino de passe", atributo: "passe" },
-    { label: "Treino de marcação", atributo: "marcacao" },
-    { label: "Treino de equilíbrio", atributo: "equilibrio" },
+    { label: "Troca de passes", atributo: "passe" },
+    { label: "Posicionamento defensivo", atributo: "marcacao" },
+    { label: "Estabilidade física", atributo: "equilibrio" },
   ],
   [
-    { label: "Agilidade e reação", atributo: "agilidade" },
-    { label: "Precisão nos chutes", atributo: "precisao" },
-    { label: "Defesa e reflexos", atributo: "reflexo" },
+    { label: "Movimentos coordenados", atributo: "agilidade" },
+    { label: "Chute controlado", atributo: "precisao" },
+    { label: "Reação defensiva", atributo: "reflexo" }, 
   ],
 ];
 
