@@ -56,7 +56,7 @@ module.exports = {
     if (modo === "on") {
       if (alvo.flowAtivo) return message.reply("⚠️ Esse jogador já está em Flow.");
 
-      alvo.flowAtivo = true;
+      alvo["flowAtivo"] = true;
 
       // aplicar bônus (NPC = sempre bônus base)
       for (const [key, value] of Object.entries(fluxo.bonusAtributos)) {
@@ -99,7 +99,17 @@ module.exports = {
       await message.channel.send({ embeds: [embed], files: [gifAttachment] });
     }
 
-    // salvar
-    fs.writeFileSync(partidasPath, `module.exports = ${JSON.stringify(partidas, null, 2)};`, "utf-8");
-  },
+        // impedir duplicação estranha do Node
+    Object.setPrototypeOf(partidas, Object.prototype);
+
+    // garantir que os players não virem versão "bugada"
+    partida.players = partida.players.map(p => ({ ...p }));
+
+    // salvar sem duplicar
+    fs.writeFileSync(
+      partidasPath,
+      `module.exports = ${JSON.stringify(partidas, null, 2)};`,
+      "utf-8"
+    );
+      },
 };
